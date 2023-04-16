@@ -14,7 +14,7 @@ pipeline {
 
             stage('Build Stage'){
                 steps {
-                    dir('Week9') {
+                    dir('tool2') {
                         echo "Current path is ${pwd()}"
                         sh "docker-compose build"
                     }
@@ -23,8 +23,8 @@ pipeline {
 
             stage('Push Stage'){
                 steps {
-                    dir('Week9') {
-                        sh 'docker push it63070029/my-backend_image:1.0'
+                    dir('tool2') {
+                        
                         sh 'docker push it63070029/my-frontend_image:1.0'
                     }
                 }
