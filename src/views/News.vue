@@ -60,7 +60,7 @@
                 <div>เวลา : {{ subjectnews.time }} </div>
               </div>
               
-              <div class="button" v-if="!selectnews.bgSuccess" @click="confirmNews(index)" > ยืนยันทราบข่าวสาร </div>
+              <div class="button" v-if="!selectnews.bgSuccess" @click="confirmNews(index,subjectnews.id)" > ยืนยันทราบข่าวสาร </div>
               
             </section>
             
@@ -87,7 +87,7 @@
             {id:1,idSubject:"06016310",teach:"รศ.ดร.นพพร โชติกกำธร",topic:"การเปลี่ยนแปลงสถานที่เรียน",date:"20/11/65",time:"8.45",detail:"เนื่องด้วยปัญหาทางเทคนิคจึงขอเปลี่ยนเวลาที่ทำการเรียนการสอนเป็น 14.30-16.30 น.",bgSuccess:false},
             {id:2,idSubject:"06016310",teach:"รศ.ดร.นพพร โชติกกำธร",topic:"การเปลี่ยนแปลงสถานที่เรียน",date:"12/11/65",time:"10.05",detail:"เนื่องด้วยปัญหาทางเทคนิคจึงขอเปลี่ยนสถานที่ที่ทำการสอนเป็น project base 3",bgSuccess:true},
             {id:3,idSubject:"06016325",teach:"ผศ.ดร. ธราวิเชษฐ์ ธิติจรูญโรจน์",topic:"การเปลี่ยนแปลงสถานที่เรียน",date:"20/11/65",time:"7.00",detail:"เนื่องด้วยปัญหาทางเทคนิคจึงขอเปลี่ยนเวลาที่ทำการเรียนการสอนเป็น 14.30-16.30 น.",bgSuccess:false},
-                  {id:4,idSubject:"06016323",teach:"ดร. พัฒนพงษ์ ฉันทมิตรโอภาส",topic:"งดการเรียน",date:"21/11/65",time:"13.00",detail:"งดการเรียนเนื่องการสถานการณืน้ำท่วม",bgSuccess:false},
+            {id:4,idSubject:"06016323",teach:"ดร. พัฒนพงษ์ ฉันทมิตรโอภาส",topic:"งดการเรียน",date:"21/11/65",time:"13.00",detail:"งดการเรียนเนื่องการสถานการณืน้ำท่วม",bgSuccess:false},
             {id:6,idSubject:"06016323",teach:"ดร. พัฒนพงษ์ ฉันทมิตรโอภาส",topic:"การสอนชดเชย",date:"23/11/65",time:"13.00",detail:"สอนชดเชยจากคาบที่แล้ว ที่ห้องL307",bgSuccess:false},
             {id:8,idSubject:"06016323",teach:"ดร. พัฒนพงษ์ ฉันทมิตรโอภาส",topic:"การส่งงาน", date:"24/11/65",time:"12.00",detail:"ให้นักศึกษาส่งงานที่ onlearn ภายในวันที่ 26/11/65 เวลา 23.59 น.",bgSuccess:false},
             {id:5,idSubject:"90304004",teach:"ผศ. จันจิรา จันทร์เจริญสุข",topic:"งดการเรียน",date:"19/10/65",time:"9.00",detail:"งดการเรียนการสอนเนื่องจากฝุ่น PM2.5มีปริมาณมาก",bgSuccess:false},
@@ -108,9 +108,10 @@
       
     },
     methods: {
-      confirmNews(index){
+      confirmNews(index,id){
         this.modalShowDetail =false
-        console.log(index)
+        console.log(this.newsTotal.filter((val)=>(val.id==id))+"hiiii")
+        
         this.newsTotal[index].bgSuccess = true
 
         
@@ -118,7 +119,6 @@
       showDetail(id){
         this.modalShowDetail = true;
         this.selectnews = this.newsTotal.filter((val)=>(val.id==id))
-       
       },
     
     },
