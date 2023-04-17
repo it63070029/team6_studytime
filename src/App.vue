@@ -50,16 +50,6 @@
             <strong>LogOut</strong></a>
             
           </div>
-          
-          <!-- <div  class="navbar-item">
-            <router-link to="/user/login">
-              <span class="icon">
-                <i class="fa fa-sign-in"></i>
-              </span>
-              <strong>Login</strong>
-            </router-link>
-          </div> -->
-          
         </div>
       </div>
     </nav>
