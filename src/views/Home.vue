@@ -102,7 +102,7 @@
             <div class="columns" v-for="subject in subject" :key="subject.id">
               
              <div v-if="idSubject== subject.id">
-              <div>ชื่อวิชา :{{subject.name}} เวลา : {{subject.time}}</div>
+              <div>ชื่อวิชา :{{subject.name}}</div>
               
              </div>
              
