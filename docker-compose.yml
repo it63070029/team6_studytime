@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: it63070029/tool-image:1.0
