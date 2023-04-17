@@ -44,10 +44,10 @@
             
           </div>
           <div class="navbar-item" @click="logOut()">
-            <span class="icon">
+            <a><span class="icon">
               <i class="fa fa-sign-out"></i>
             </span>
-            <strong>LogOut</strong>
+            <strong>LogOut</strong></a>
             
           </div>
           
