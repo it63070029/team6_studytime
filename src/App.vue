@@ -3,12 +3,12 @@
     <!-- nav bar -->
     <nav class="navbar has-background-link-light" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <!-- <router-link to="/" class="navbar-item is-size-3">
+        <router-link to="/" class="navbar-item is-size-3">
           <span class="icon">
             <i class="fa fa-book mr-2"></i>
           </span>
-          <strong>ReadNovel</strong>
-        </router-link> -->
+          <strong>Study Time</strong>
+        </router-link>
 
         <a
           role="button"
@@ -29,7 +29,7 @@
           <div  class="navbar-item">
            <router-link to="/">
               <span class="icon">
-                <i class="fa fa-house"></i>
+                <i class="fa fa-table"></i>
               </span>
               <strong>Home</strong>
            </router-link>
@@ -43,13 +43,13 @@
               </router-link>
             
           </div>
-          <!-- <div class="navbar-item" @click="logOut()">
+          <div class="navbar-item" @click="logOut()">
             <span class="icon">
               <i class="fa fa-sign-out"></i>
             </span>
             <strong>LogOut</strong>
             
-          </div> -->
+          </div>
           
           <!-- <div  class="navbar-item">
             <router-link to="/user/login">
@@ -95,9 +95,7 @@ export default {
       })
     },
     logOut(){
-      localStorage.clear();
-      this.user = null;
-      this.$router.push('/user/login')
+      this.$router.push({ name: 'login'})
     }
   },
 };
