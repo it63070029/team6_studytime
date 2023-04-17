@@ -250,7 +250,6 @@ export default {
       showMySubject:[],
       modalDelete:false,
       indexDelete:'',
-
     };
   },
   mounted() {
