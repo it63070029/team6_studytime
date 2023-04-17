@@ -48,8 +48,7 @@
                   <span style="float:right"><div class="button mx-2" @click="linktoNews(mySubject.id,mySubject)">ดูข่าวสาร </div></span>
 
                 </div>
-                <!-- <div style="color:#FFF">{{mySubject.date +"  "+mySubject.time}}<span style="float:right"><div class="button" @click="showDetail(mySubject.id)">ดูเพิ่มเติม > </div></span></div> -->
-                <!-- <div class="content" style="height: 100px;">descript: {{ shortContent(novel.descript) }}</div> -->
+               
               </div>
                
                 
