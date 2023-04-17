@@ -3,6 +3,5 @@ version: '3'
 services:
   frontend:
     build:
-      context: ./Front
       dockerfile: Dockerfile
     image: it63070029/my-frontend_image:1.0
