@@ -25,7 +25,7 @@ pipeline {
                 steps {
                     dir('tool2') {
                         
-                        sh 'docker push it63070029/tool_image:1.0'
+                        sh 'docker push it63070029/tool-image:1.0'
                     }
                 }
             }
