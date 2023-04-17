@@ -302,7 +302,6 @@ export default {
       this.modalDelete = true;
       this.selectSubject = this.mySubject.filter((val)=>(id==val.id));
       this.indexDelete = index;
-
     },
     confirmDelete(){
       this.mySubject.splice(this.indexDelete,1)
