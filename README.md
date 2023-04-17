@@ -57,4 +57,3 @@ app.use(cors())
 
 **How to use Font Awesome in Vue JS Project**
 * https://medium.com/front-end-weekly/how-to-use-fon-awesome-5-on-vuejs-project-ff0f28310821
-
