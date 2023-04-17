@@ -7,6 +7,7 @@ npm install -g @vue/cli
 ```
 vue create frontend
 
+
 Vue CLI v4.5.12
 ? Please pick a preset: Manually select features
 ? Check the features needed for your project: Choose Vue version, Babel, Router, Linter
